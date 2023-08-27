@@ -1,0 +1,45 @@
+<template>
+   <div class="container">
+    <div class="card card-margin p-4">
+    <div class="row">
+        <div class="col-12 col-sm-2">
+            <img src="/resources/images/building-logo.svg" alt="Building icon" height="60px" width="100%">
+        </div>
+        <div class="col-12 col-sm-7 text-center mt-2 mb-2">
+            <h3>{selectedJob.company.display_name}</h3>
+        </div>
+        <div class="col-12 col-sm-3 text-center">
+            <a href={selectedJob.redirect_url} target="_blank" class="btn btn-outline-dark" role="button">
+                Company Website
+            </a>
+        </div>
+    </div>
+   </div>
+
+   <div class="card card-margin p-4 mt-3">
+    <div class="row">
+        <div class="col-12 col-sm-8">
+            <p class="text-secondary"> Posted On : {formattedDate} </p>
+        </div>
+        <div class="col-12 col-sm-4 text-right">
+            <a href={selectedJob.redirect_url} target="_blank" role="button" class="btn custom-button btn-lg">Apply Now</a>
+        </div>
+
+        <div class="col-12 mb-3">
+            <h3>{selectedJob.title}</h3>
+            <p><span class="badge badge-danger">{contractType}</span></p>
+        </div>
+
+        <div class="col-12">
+            <!-- <h4>{formatDescriptionHeading} : </h4> -->
+            <template for:each={formattedDescription} for:item="item">
+                <ul key={item} class="job-description">
+                    <li>{item}.</li>
+                </ul>
+            </template>
+            
+        </div>
+    </div>
+   </div>
+</div>
+</template>

@@ -1,0 +1,33 @@
+<template>
+    <div class="card"> 
+        <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-sm-8">
+                <p class="text-secondary">Posted on : {formattedDate}</p>
+            </div>
+            <div class="col-12 col-sm-4 text-right">
+                <p ><span class="badge badge-danger">{contractType}</span></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <p class="card-title">{job.title}</p>
+            </div>
+            <div class="col-12">
+                <p class="text-secondary">{job.company.display_name}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8">
+                <p class="card-text text-dark text-truncate">Location : {job.location.display_name}</p>
+            </div>
+            <div class="col-12 col-sm-4 text-right">
+                <button type="button" class="btn btn-info btn-sm" onclick={viewDetailHandler}> View Details</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</template>

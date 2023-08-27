@@ -1,0 +1,16 @@
+<template>
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                Job Board
+            </div>
+            <template if:true={showBtn}>
+                <div class="col-6 text-right">
+                    <button type="button" class="btn btn-light"  onclick={backtoJobsHandler}> All Jobs</button>
+                </div>
+            </template>
+            
+        </div>
+       
+    </nav>
+</template>

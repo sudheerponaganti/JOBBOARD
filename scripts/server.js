@@ -11,7 +11,14 @@ app.use(compression());
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3001;
 const DIST_DIR = './dist';
-
+app.use((req,res,next)=>{
+    res.setHeader(
+        'Content-Security-Policy',
+        "script-src 'self' https://api.adzuna.com/v1/api/jobs/in/search/",
+        "img-src 'self' https://api.adzuna.com/v1/api/jobs/in/search/"
+    )
+    return next()
+})
 app.use(express.static(DIST_DIR));
 
 app.use('*', (req, res) => {

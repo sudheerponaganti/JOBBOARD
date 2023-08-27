@@ -1,0 +1,10 @@
+.card-margin{
+    margin-top:-50px;
+}
+
+.custom-button, .custom-button:hover, .custom-button:active, .custom-button:focus{
+    background-color: #7827c3 !important;
+    border-color: #7827c3 !important;
+    outline:none !important;
+    color:white;
+   }
